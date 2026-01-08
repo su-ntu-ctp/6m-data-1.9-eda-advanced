@@ -10,27 +10,40 @@
 
 If you have two dataframes—Customers (containing all customer details) and Orders (containing transaction history)—and you want to keep ALL customers, even those who have never placed an order, which join type should you use?
 
-* A) how='inner'  
-* B) how='right' (assuming Orders is the right table)  
-* C) how='left' (assuming Customers is the left table)  
-* D) how='cross'
+* A) `how='inner'`  
+* B) `how='right'` (assuming Orders is the right table)  
+* C) `how='left'` (assuming Customers is the left table)  
+* D) `how='cross'`
 
-Correct Answer: C) how='left'
+<details>
 
-Explanation: A Left Join keeps all keys from the left table (Customers) and fills in NaN for the right table (Orders) if no match is found.
+  <summary>Click to Show Answer</summary>
+  
+* Correct Answer: `C) how='left'`
+
+* Explanation: A Left Join keeps all keys from the left table (Customers) and fills in NaN for the right table (Orders) if no match is found.
+</details>
+
+
 
 2\. Data Reshaping
 
 You have a dataset where every year (2020, 2021, 2022\) is a separate column. You want to transform this into a database-friendly format with a single "Year" column and a single "Value" column. Which function do you use?
 
-* A) pd.pivot()  
-* B) pd.melt()  
-* C) pd.stack()  
-* D) pd.concat()
+* A) `pd.pivot()`  
+* B) `pd.melt()`  
+* C) `pd.stack()`  
+* D) `pd.concat()`
 
-Correct Answer: B) pd.melt()
+<details>
 
-Explanation: Melting transforms "Wide" data (columns as headers) into "Long" data (variables as rows).
+  <summary>Click to Show Answer</summary>
+  
+* Correct Answer: B) pd.melt()
+
+* Explanation: Melting transforms "Wide" data (columns as headers) into "Long" data (variables as rows).
+</details>
+
 
 3\. Time Series Handling
 
@@ -41,22 +54,34 @@ In the code df.resample('D').ffill(), what is the specific purpose of .ffill()?
 * C) It fills missing values (NaNs) with 0\.  
 * D) It fills missing values with the value from the previous valid observation.
 
-Correct Answer: D) It fills missing values with the value from the previous valid observation.
+<details>
 
-Explanation: Forward Fill (ffill) propagates the last valid value forward, which is standard for handling weekends in stock price data.
+  <summary>Click to Show Answer</summary>
+  
+* Correct Answer: D) It fills missing values with the value from the previous valid observation.
+
+* Explanation: Forward Fill (ffill) propagates the last valid value forward, which is standard for handling weekends in stock price data.
+</details>
+
 
 4\. Aggregation Syntax
 
 You want to calculate the mean of the 'Tip' column, grouped by 'Day'. Which syntax is the most efficient and correct?
 
-* A) tips.groupby('Day')\['Tip'\].mean()  
-* B) tips.mean().groupby('Day')  
-* C) tips.pivot('Day', 'Tip')  
-* D) tips.groupby('Tip')\['Day'\].mean()
+* A) `tips.groupby('Day')\['Tip'\].mean()`  
+* B) `tips.mean().groupby('Day')`  
+* C) `tips.pivot('Day', 'Tip')`  
+* D) `tips.groupby('Tip')\['Day'\].mean()`
 
-Correct Answer: A) tips.groupby('Day')\['Tip'\].mean()
+<details>
 
-Explanation: This follows the Split-Apply-Combine logic: Split by Day, Select the Tip column, Apply the Mean function.
+  <summary>Click to Show Answer</summary>
+  
+* Correct Answer: `A) tips.groupby('Day')\['Tip'\].mean()`
+
+* Explanation: This follows the Split-Apply-Combine logic: Split by Day, Select the Tip column, Apply the Mean function.
+</details>
+
 
 5\. Interpretation
 
@@ -67,9 +92,15 @@ You calculate the correlation between Sales and Profit and get a result of 0.95.
 * C) As Sales increase, Profit increases strongly.  
 * D) This calculation is invalid because variables are not normalized.
 
-Correct Answer: C) As Sales increase, Profit increases strongly.
+<details>
 
-Explanation: A correlation close to \+1.0 indicates a very strong positive linear relationship.
+  <summary>Click to Show Answer</summary>
+  
+* Correct Answer: C) As Sales increase, Profit increases strongly.
+
+* Explanation: A correlation close to \+1.0 indicates a very strong positive linear relationship.
+</details>
+
 
 ## **Part 2: Mini-Project Assignment**
 
